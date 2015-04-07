@@ -1,7 +1,7 @@
 set shiftwidth=4
 set tabstop=4
 set t_Co=256
-colorscheme harlequin
+colorscheme oceanlight
 set autoindent
 set smartindent
 set nu
@@ -11,7 +11,8 @@ set textwidth=80
 set title
 set showcmd
 set wildmenu
-set backupdir=/home/dv/.vim/.vim_swp/
+set backupdir=~/.vim/bkp
+set directory=~/.vim/swp
 set cul
 syntax on
 hi CursorLine term=none cterm=none ctermbg=8
@@ -39,3 +40,5 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L"
+
+:set hlsearch
