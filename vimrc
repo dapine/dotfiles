@@ -1,31 +1,90 @@
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=/home/dapine/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('/home/dapine/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'terryma/vim-multiple-cursors'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
+
+"-------------
+" basic setup
+"-------------
 set shiftwidth=4
 set tabstop=4
-set t_Co=256
-colorscheme oceanlight
+set backspace=indent,eol,start
+set expandtab
+
 set autoindent
 set smartindent
-set nu
-set ruler
-set showmatch
-set textwidth=80
-set title
-set showcmd
-set wildmenu
-set backupdir=~/.vim/bkp
-set directory=~/.vim/swp
-set cul
-syntax on
-hi CursorLine term=none cterm=none ctermbg=8
+
+set nobackup
+set nowritebackup
+set noswapfile
+
 set history=1000
 set undolevels=1000
-filetype plugin on
 set scrolloff=5
-" pathogen
-execute pathogen#infect()
-filetype plugin indent on
 set nocompatible
 set encoding=utf-8
-" Key map
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set nu
+
+"--------------
+" visual setup
+"--------------
+syntax on
+set t_Co=256
+colorscheme Tomorrow-Night
+set ruler
+set showmatch
+set showcmd
+set wildmenu
+set cul
+hi CursorLine term=none cterm=none ctermbg=8
+
+"--------------
+" keymap setup
+"--------------
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -34,11 +93,12 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-" gvim
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
-:set guioptions-=L"
 
-:set hlsearch
+"------------
+" gvim setup
+"------------
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
