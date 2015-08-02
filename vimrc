@@ -26,6 +26,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'fatih/vim-go'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -81,6 +82,7 @@ set showcmd
 set wildmenu
 set cul
 hi CursorLine term=none cterm=none ctermbg=8
+set colorcolumn=120
 
 "--------------
 " keymap setup
