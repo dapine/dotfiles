@@ -5,11 +5,11 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=/home/dapine/.vim/bundle/neobundle.vim/
+  set runtimepath+=/home/dv/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/dapine/.vim/bundle'))
+call neobundle#begin(expand('/home/dv/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -27,6 +27,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'mitsuhiko/vim-jinja'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
