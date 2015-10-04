@@ -5,19 +5,17 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=/home/dv/.vim/bundle/neobundle.vim/
+  set runtimepath+=/home/dapine/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/dv/.vim/bundle'))
+call neobundle#begin(expand('/home/dapine/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -28,9 +26,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'mitsuhiko/vim-jinja'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+NeoBundle 'rust-lang/rust.vim'
 
 " Required:
 call neobundle#end()
@@ -70,6 +66,8 @@ set ignorecase
 set smartcase
 
 set nu
+
+set autochdir
 
 "--------------
 " visual setup
