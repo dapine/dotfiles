@@ -56,7 +56,7 @@ set noswapfile
 
 set history=1000
 set undolevels=1000
-set scrolloff=5
+set scrolloff=10
 set nocompatible
 set encoding=utf-8
 
@@ -95,6 +95,13 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+inoremap jk <esc>
+
 "------------
 " gvim setup
 "------------
@@ -102,4 +109,3 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-
