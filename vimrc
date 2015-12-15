@@ -18,7 +18,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Add or remove your Bundles here:
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'jiangmiao/auto-pairs'
@@ -73,8 +74,12 @@ set autochdir
 " visual setup
 "--------------
 syntax on
-set t_Co=256
-colorscheme Tomorrow-Night
+set background=dark
+colorscheme jellybeans
+if has('gui_running')
+    set t_Co=256
+    colorscheme hybrid
+endif
 set ruler
 set showmatch
 set showcmd
