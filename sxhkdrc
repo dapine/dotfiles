@@ -1,0 +1,54 @@
+# terminal
+super + t
+    urxvt
+
+super + Return
+    urxvt
+
+# dmenu
+alt + F2
+    dmenu_run
+
+# web browser
+super + w
+    firefox
+
+# move window
+super + j
+	wmv 0 25 $(pfw)
+super + k
+	wmv 0 -25 $(pfw)
+super + l
+	wmv 25 0 $(pfw)
+super + h
+	wmv -25 0 $(pfw)
+
+# increase window size
+super + shift + l 
+	wrs 25 0 $(pfw)
+super + shift + h
+	wrs -25 0 $(pfw)
+super + shift + k 
+	wrs 0 -25 $(pfw)
+super + shift + j 
+	wrs 0 25 $(pfw)
+
+# move window with the mouse
+super + !button{1,3}
+    {wmv, wrs} -a %i %i $(pfw)
+
+# focus window
+alt + Tab
+    /home/dapine/bin/contrib/focus.sh next prev
+
+# kill swm
+super + F12
+    pkill swm
+
+# kill window
+alt + F4
+    killw $(pfw)
+
+# fullscreen
+super + x
+    /home/dapine/bin/contrib/fullscreen.sh $(pfw)
