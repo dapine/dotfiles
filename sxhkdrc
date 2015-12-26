@@ -13,6 +13,10 @@ alt + F2
 super + w
     firefox
 
+# gvim
+super + e
+    gvim 
+
 # move window
 super + j
 	wmv 0 25 $(pfw)
