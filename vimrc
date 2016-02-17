@@ -1,44 +1,28 @@
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+set nocompatible
+filetype off
 
-  " Required:
-  set runtimepath+=/home/dapine/.vim/bundle/neobundle.vim/
-endif
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Required:
-call neobundle#begin(expand('/home/dapine/.vim/bundle'))
+Plugin 'VundleVim/Vundle.vim'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'fatih/vim-go'
+Plugin 'mitsuhiko/vim-jinja'
+Plugin 'rust-lang/rust.vim'
+Plugin 'fxn/vim-monochrome'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'nvie/vim-flake8'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
-" Add or remove your Bundles here:
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'mitsuhiko/vim-jinja'
-NeoBundle 'rust-lang/rust.vim'
-
-" Required:
-call neobundle#end()
-
-" Required:
+call vundle#end()
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
 
 "-------------
 " basic setup
@@ -58,15 +42,12 @@ set noswapfile
 set history=1000
 set undolevels=1000
 set scrolloff=10
-set nocompatible
 set encoding=utf-8
 
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-set nu
 
 set autochdir
 
@@ -75,18 +56,13 @@ set autochdir
 "--------------
 syntax on
 set background=dark
-colorscheme jellybeans
-if has('gui_running')
-    set t_Co=256
-    colorscheme hybrid
-endif
+colorscheme monochrome
 set ruler
 set showmatch
 set showcmd
 set wildmenu
 set cul
 hi CursorLine term=none cterm=none ctermbg=8
-set colorcolumn=120
 
 "--------------
 " keymap setup
