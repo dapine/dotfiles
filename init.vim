@@ -2,12 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'rust-lang/rust.vim'
@@ -17,6 +13,14 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'bling/vim-bufferline'
 Plug 'benekastah/neomake'
 Plug 'jceb/vim-orgmode'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'lfilho/cosco.vim'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
