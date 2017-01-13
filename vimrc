@@ -9,24 +9,21 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'fatih/vim-go'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'rust-lang/rust.vim'
-Plugin 'fxn/vim-monochrome'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nvie/vim-flake8'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on
 
-"-------------
 " basic setup
-"-------------
 set shiftwidth=4
 set tabstop=4
 set backspace=indent,eol,start
@@ -51,12 +48,10 @@ set smartcase
 
 set autochdir
 
-"--------------
 " visual setup
-"--------------
 syntax on
-set background=dark
-colorscheme monochrome
+set background=light
+colorscheme solarized
 set ruler
 set showmatch
 set showcmd
@@ -64,9 +59,7 @@ set wildmenu
 set cul
 hi CursorLine term=none cterm=none ctermbg=8
 
-"--------------
 " keymap setup
-"--------------
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -83,9 +76,10 @@ nnoremap <C-H> <C-W><C-H>
 
 inoremap jk <esc>
 
-"------------
+let mapleader="\<Space>"
+nnoremap <Leader>n :NERDTree<CR>
+
 " gvim setup
-"------------
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
