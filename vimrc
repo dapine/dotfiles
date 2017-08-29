@@ -6,24 +6,21 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'fatih/vim-go'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'rust-lang/rust.vim'
 Plugin 'nvie/vim-flake8'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
-" basic setup
+" basic
 set shiftwidth=4
 set tabstop=4
 set backspace=indent,eol,start
@@ -48,39 +45,45 @@ set smartcase
 
 set autochdir
 
-" visual setup
+set mouse=a
+
+set lazyredraw
+
+" visual
 syntax on
-set background=light
-colorscheme solarized
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+set background=dark
+colorscheme jellybeans
 set ruler
 set showmatch
 set showcmd
 set wildmenu
-set cul
-hi CursorLine term=none cterm=none ctermbg=8
 
-" keymap setup
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
+" keymap
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+noremap 0 ^
+
+noremap ; :
 
 inoremap jk <esc>
 
 let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTree<CR>
 
-" gvim setup
+" gvim
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
+
+" go
+let g:go_fmt_command = "goimports"
+noremap <F10> :GoInstall<CR>
+noremap <F11> :GoBuild<CR>
+noremap <F12> :GoRun %<CR>

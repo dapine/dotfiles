@@ -1,5 +1,0 @@
-swm
-sxhkd
-wmutils/core
-wmutils/contrib
-lemonbar
