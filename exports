@@ -1,0 +1,8 @@
+export PLAN9=/usr/local/plan9
+PATH=$PATH:$PLAN9/bin
+
+export GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
+
+export editor=vim
+export TERM=xterm-256color
