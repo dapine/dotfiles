@@ -16,6 +16,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'ervandew/supertab'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,17 +64,9 @@ set showcmd
 set wildmenu
 
 " keymap
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 noremap 0 ^
-
 noremap ; :
-
 inoremap jk <esc>
-
 let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTree<CR>
 
@@ -84,6 +78,13 @@ set guioptions-=L
 
 " go
 let g:go_fmt_command = "goimports"
-noremap <F10> :GoInstall<CR>
-noremap <F11> :GoBuild<CR>
-noremap <F12> :GoRun %<CR>
+
+" supertab
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
+" vim tmux
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
