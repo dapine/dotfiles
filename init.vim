@@ -17,6 +17,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'eagletmt/neco-ghc'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'neomake/neomake'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 " basic
@@ -68,14 +70,18 @@ noremap ; :
 inoremap jk <esc>
 let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTree<CR>
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
-" go
+" vim-go
 let g:go_fmt_command = "goimports"
 
 " supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
-" vim tmux
+" vim-tmux
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
@@ -84,3 +90,8 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
