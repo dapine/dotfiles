@@ -19,6 +19,9 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " basic
@@ -44,13 +47,13 @@ set incsearch
 set ignorecase
 set smartcase
 
-set autochdir
-
-set mouse=a
+if has("mouse")
+    set mouse=a
+endif
 
 set lazyredraw
-
 set laststatus=0
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o
 
 " visual
 syntax on
@@ -74,6 +77,7 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+nnoremap <c-p> :FZF<cr>
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -95,3 +99,9 @@ let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" fzf.vim
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
