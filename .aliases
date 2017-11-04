@@ -1,5 +1,10 @@
 alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -a'
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias acme='acme -a -f /mnt/font/Go\ Mono/10a/font'
 alias c=clear
+alias vim=nvim
+alias v=nvim
+alias todo='v ~/.todo'

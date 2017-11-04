@@ -14,14 +14,21 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'eagletmt/neco-ghc'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-clang'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'eagletmt/neco-ghc'
 Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'junegunn/goyo.vim'
+Plug 'lervag/vimtex'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " basic
@@ -52,8 +59,8 @@ if has("mouse")
 endif
 
 set lazyredraw
-set laststatus=0
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o
+set laststatus=1
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*hi
 
 " visual
 syntax on
@@ -105,3 +112,11 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+" haskell
+function! LoadInGHCi()
+    :!tmux send-keys -t 0:0.1 ":l %" Enter
+endfunction
+
+command! LoadInGHCi call LoadInGHCi()
+command! Vterm vsplit | terminal
