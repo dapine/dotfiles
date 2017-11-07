@@ -12,12 +12,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'nanotech/jellybeans.vim'
 Plug 'ervandew/supertab'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-clang'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'eagletmt/neco-ghc'
 Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
@@ -53,6 +50,8 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+set completeopt-=preview
 
 if has("mouse")
     set mouse=a
@@ -101,6 +100,7 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -117,6 +117,10 @@ let g:fzf_action = {
 function! LoadInGHCi()
     :!tmux send-keys -t 0:0.1 ":l %" Enter
 endfunction
+
+" latex
+" https://github.com/honza/vim-snippets/issues/552
+let g:tex_flavor = "latex"
 
 command! LoadInGHCi call LoadInGHCi()
 command! Vterm vsplit | terminal
