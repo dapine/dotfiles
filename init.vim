@@ -79,6 +79,8 @@ noremap ; :
 inoremap jk <esc>
 let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTree<CR>
+nnoremap <Leader>v :vsplit 
+nnoremap <Leader>h :split 
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
