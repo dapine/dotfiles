@@ -27,6 +27,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'jpalardy/vim-slime'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 " basic
