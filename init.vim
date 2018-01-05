@@ -26,6 +26,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 " basic
@@ -72,6 +73,8 @@ set ruler
 set showmatch
 set showcmd
 set wildmenu
+" https://github.com/neovim/neovim/issues/6154
+set guicursor=
 
 " keymap
 noremap 0 ^
