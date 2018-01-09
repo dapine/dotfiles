@@ -1,6 +1,8 @@
 export PLAN9=/usr/local/plan9
 PATH=$PATH:$PLAN9/bin
 
+export PATH=$PATH:/usr/local/go/bin
+
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 

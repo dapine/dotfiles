@@ -22,7 +22,6 @@ Plug 'honza/vim-snippets'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
@@ -128,6 +127,10 @@ endfunction
 " latex
 " https://github.com/honza/vim-snippets/issues/552
 let g:tex_flavor = "latex"
+
+" javascript
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                     
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 command! LoadInGHCi call LoadInGHCi()
 command! Vterm vsplit | terminal
