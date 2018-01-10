@@ -19,3 +19,5 @@ PATH=$PATH:$HOME/.local/bin
 
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG
+
+export PATH="$HOME/.cargo/bin:$PATH"
