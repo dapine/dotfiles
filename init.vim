@@ -1,7 +1,7 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'fatih/vim-go'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'rust-lang/rust.vim'
@@ -21,13 +21,12 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'jpalardy/vim-slime'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'elmcast/elm-vim'
 call plug#end()
 
 " basic
@@ -59,6 +58,10 @@ if has("mouse")
     set mouse=a
 endif
 
+" gotta go faster
+set nocursorline
+set nocursorcolumn
+set synmaxcol=180
 set lazyredraw
 set laststatus=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*hi
