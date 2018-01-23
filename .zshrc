@@ -10,10 +10,14 @@ bindkey -e
 zstyle :compinstall filename '/home/dlp/.zshrc'
 
 autoload -Uz compinit
+autoload -U colors && colors
 compinit
 # End of lines added by compinstall
 
 source ~/.aliases
 source ~/.exports
+source ~/.spectrum.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+PROMPT="$FG[093]%~ $FG[091]>>>%{$reset_color%} "
