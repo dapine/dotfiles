@@ -84,6 +84,7 @@ set guicursor=
 noremap 0 ^
 noremap ; :
 inoremap jk <esc>
+inoremap <c-d> <del>
 let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTree<CR>
 nnoremap <Leader>v :vsplit 
