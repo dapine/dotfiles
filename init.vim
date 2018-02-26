@@ -1,32 +1,59 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
+" general
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'fatih/vim-go'
-Plug 'mitsuhiko/vim-jinja'
-Plug 'rust-lang/rust.vim'
-Plug 'nvie/vim-flake8'
-Plug 'tomasr/molokai'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'nanotech/jellybeans.vim'
 Plug 'ervandew/supertab'
+Plug 'neomake/neomake'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'tpope/vim-fugitive'
+
+" completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'eagletmt/neco-ghc'
-Plug 'neomake/neomake'
+
+" snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+" visual
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'nanotech/jellybeans.vim'
+Plug 'junegunn/goyo.vim'
+
+" tmux
+Plug 'christoomey/vim-tmux-navigator'
+
+" go
+Plug 'fatih/vim-go'
+
+" python
+Plug 'mitsuhiko/vim-jinja'
+Plug 'nvie/vim-flake8'
+
+" rust
+Plug 'rust-lang/rust.vim'
+
+" haskell
 Plug 'neovimhaskell/haskell-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" latex
 Plug 'lervag/vimtex'
-Plug 'tpope/vim-fugitive'
-Plug 'jpalardy/vim-slime'
+
+" javascript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
+" elm
 Plug 'elmcast/elm-vim'
+
+" lisp 
+Plug 'jpalardy/vim-slime'
+
 call plug#end()
 
 " basic
@@ -127,6 +154,7 @@ let g:fzf_action = {
 function! LoadInGHCi()
     :!tmux send-keys -t 0:0.1 ":l %" Enter
 endfunction
+let g:necoghc_enable_detailed_browse=1
 
 " latex
 " https://github.com/honza/vim-snippets/issues/552
