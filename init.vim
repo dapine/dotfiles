@@ -24,6 +24,7 @@ Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'dracula/vim'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -53,6 +54,9 @@ Plug 'elmcast/elm-vim'
 
 " lisp 
 Plug 'jpalardy/vim-slime'
+
+" elixir
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
@@ -95,11 +99,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*hi
 
 " visual
 syntax on
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
+set termguicolors
 set background=dark
-colorscheme jellybeans
+colorscheme dracula 
 set ruler
 set showmatch
 set showcmd
@@ -113,7 +115,7 @@ noremap ; :
 inoremap jk <esc>
 inoremap <c-d> <del>
 let mapleader="\<Space>"
-nnoremap <Leader>n :NERDTree<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>v :vsplit 
 nnoremap <Leader>h :split 
 nnoremap j gj
