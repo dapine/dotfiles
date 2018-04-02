@@ -25,6 +25,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dracula/vim'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -97,11 +98,14 @@ set lazyredraw
 set laststatus=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*hi
 
+set splitbelow
+set splitright
+
 " visual
 syntax on
 set termguicolors
 set background=dark
-colorscheme dracula 
+colorscheme Tomorrow-Night-Bright
 set ruler
 set showmatch
 set showcmd
