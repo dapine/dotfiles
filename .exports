@@ -26,4 +26,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 source $HOME/.nix-profile/etc/profile.d/nix.sh
 
-PATH=$PATH:$HOME/code/flutter/bin
+export PATH=$PATH:$HOME/code/flutter/bin
