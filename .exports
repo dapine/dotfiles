@@ -26,4 +26,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 source $HOME/.nix-profile/etc/profile.d/nix.sh
 
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+PATH=$PATH:$HOME/code/flutter/bin
