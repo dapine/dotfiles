@@ -8,6 +8,7 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 
 " completion
@@ -127,6 +128,8 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 nnoremap <c-p> :FZF<cr>
+nnoremap n nzz
+nnoremap N Nzz
 
 " vim-go
 let g:go_fmt_command = "goimports"
