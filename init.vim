@@ -27,6 +27,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dracula/vim'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'ayu-theme/ayu-vim'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -105,8 +106,8 @@ set splitright
 " visual
 syntax on
 set termguicolors
-set background=dark
-colorscheme Tomorrow-Night-Bright
+let ayucolor="dark"
+colorscheme ayu
 set ruler
 set showmatch
 set showcmd
