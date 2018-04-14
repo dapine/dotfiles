@@ -57,6 +57,7 @@ Plug 'elmcast/elm-vim'
 
 " lisp 
 Plug 'jpalardy/vim-slime'
+Plug 'kien/rainbow_parentheses.vim'
 
 " elixir
 Plug 'elixir-editors/vim-elixir'
@@ -174,5 +175,17 @@ let g:tex_flavor = "latex"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                     
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
+" lisp
+autocmd VimEnter *.lisp RainbowParenthesesToggle
+autocmd Syntax *.lisp RainbowParenthesesLoadRound
+
+autocmd VimEnter *.clj RainbowParenthesesToggle
+autocmd Syntax *.clj RainbowParenthesesLoadRound
+autocmd Syntax *.clj RainbowParenthesesLoadSquare
+
+autocmd VimEnter *.scm RainbowParenthesesToggle
+autocmd Syntax *.scm RainbowParenthesesLoadRound
+
+" cmds
 command! LoadInGHCi call LoadInGHCi()
 command! Vterm vsplit | terminal
