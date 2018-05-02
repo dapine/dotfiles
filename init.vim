@@ -9,7 +9,6 @@ Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
 
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -61,6 +60,10 @@ Plug 'kien/rainbow_parentheses.vim'
 
 " elixir
 Plug 'elixir-editors/vim-elixir'
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -185,6 +188,9 @@ autocmd Syntax *.clj RainbowParenthesesLoadSquare
 
 autocmd VimEnter *.scm RainbowParenthesesToggle
 autocmd Syntax *.scm RainbowParenthesesLoadRound
+
+" git gutter
+set updatetime=100
 
 " cmds
 command! LoadInGHCi call LoadInGHCi()
