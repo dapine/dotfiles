@@ -109,9 +109,11 @@ set splitright
 
 " visual
 syntax on
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+colorscheme jellybeans
+"set termguicolors
 set ruler
 set showmatch
 set showcmd
