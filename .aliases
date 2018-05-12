@@ -10,3 +10,4 @@ alias vim=nvim
 alias v=nvim
 alias todo='v ~/.todo'
 alias o=xdg-open
+alias c=cat
