@@ -111,10 +111,10 @@ set splitright
 " visual
 syntax on
 let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none' },
 \}
 colorscheme jellybeans
-"set termguicolors
+set termguicolors
 set ruler
 set showmatch
 set showcmd
@@ -131,6 +131,7 @@ let mapleader="\<Space>"
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>v :vsplit 
 nnoremap <Leader>h :split 
+nnoremap <Leader>t :buffer<Space>
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
@@ -198,3 +199,6 @@ set updatetime=100
 " cmds
 command! LoadInGHCi call LoadInGHCi()
 command! Vterm vsplit | terminal
+
+" nerdtree
+let g:NERDTreeWinPos = "right"

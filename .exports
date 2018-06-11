@@ -24,6 +24,4 @@ export NVIM_PYTHON_LOG_LEVEL=DEBUG
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-source $HOME/.nix-profile/etc/profile.d/nix.sh
-
 export PATH=$HOME/code/flutter/bin:$PATH
