@@ -63,6 +63,10 @@ Plug 'kien/rainbow_parentheses.vim'
 " elixir
 Plug 'elixir-editors/vim-elixir'
 
+" ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
+
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
