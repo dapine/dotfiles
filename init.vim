@@ -66,6 +66,7 @@ Plug 'elixir-editors/vim-elixir'
 " ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
 
 " git
 Plug 'tpope/vim-fugitive'
