@@ -15,7 +15,6 @@ Plug 'easymotion/vim-easymotion'
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'eagletmt/neco-ghc'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -45,6 +44,7 @@ Plug 'rust-lang/rust.vim'
 
 " haskell
 Plug 'neovimhaskell/haskell-vim'
+Plug 'parsonsmatt/intero-neovim'
 
 " latex
 Plug 'lervag/vimtex'
@@ -178,7 +178,9 @@ let g:fzf_action = {
 function! LoadInGHCi()
     :!tmux send-keys -t 0:0.1 ":l %" Enter
 endfunction
-let g:necoghc_enable_detailed_browse=1
+au FileType haskell nnoremap <silent> <c-]> :InteroGoToDef<CR>
+let g:intero_type_on_hover = 1
+au BufWritePost *.hs InteroReload
 
 " latex
 " https://github.com/honza/vim-snippets/issues/552

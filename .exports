@@ -6,8 +6,8 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
-export gems=$HOME/.gem/ruby/2.4.0
-PATH=$PATH:$gems/bin
+export GEM_HOME=$HOME/.gem/ruby/2.3.0
+PATH=$PATH:$GEM_HOME/bin
 
 export CABAL=$HOME/.cabal
 PATH=$PATH:$CABAL/bin
