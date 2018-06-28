@@ -28,6 +28,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'dracula/vim'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ayu-theme/ayu-vim'
+Plug 'mkitt/tabline.vim'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -109,7 +110,7 @@ set nocursorcolumn
 set synmaxcol=180
 set lazyredraw
 set laststatus=1
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*hi
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*/node_modules/*,*/deps/*,*/_build/*
 
 set splitbelow
 set splitright
@@ -145,6 +146,8 @@ vnoremap k gk
 nnoremap <c-p> :FZF<cr>
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap <m-h> :tabprevious<cr>
+nnoremap <m-l> :tabnext<cr>
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -210,3 +213,4 @@ command! Vterm vsplit | terminal
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
+let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
