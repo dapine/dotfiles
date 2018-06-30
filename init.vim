@@ -11,6 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
+Plug 'w0rp/ale'
 
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -214,3 +215,10 @@ command! Vterm vsplit | terminal
 " nerdtree
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
+
+" ale
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✕'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
