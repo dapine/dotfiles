@@ -21,3 +21,6 @@ source ~/.spectrum.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 PROMPT="$FG[093]%~ $FG[091]>>>%{$reset_color%} "
+
+# OPAM configuration
+. /home/d/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

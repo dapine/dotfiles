@@ -30,6 +30,7 @@ Plug 'dracula/vim'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ayu-theme/ayu-vim'
 Plug 'mkitt/tabline.vim'
+Plug 'itchyny/lightline.vim'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -121,6 +122,9 @@ syntax on
 let g:jellybeans_overrides = {
 \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none' },
 \}
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 colorscheme jellybeans
 set termguicolors
 set ruler
@@ -129,6 +133,8 @@ set showcmd
 set wildmenu
 " https://github.com/neovim/neovim/issues/6154
 set guicursor=
+set laststatus=2
+set noshowmode
 
 " keymap
 noremap 0 ^
@@ -222,3 +228,8 @@ let g:ale_sign_error = '✕'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+
+" git gutter
+let g:gitgutter_sign_added = '•'
+let g:gitgutter_sign_modified = '•'
+let g:gitgutter_sign_removed = '•'
