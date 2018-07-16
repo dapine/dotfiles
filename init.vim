@@ -155,6 +155,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap <m-h> :tabprevious<cr>
 nnoremap <m-l> :tabnext<cr>
+nnoremap <Leader>b :Buffers<cr>
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -211,9 +212,6 @@ autocmd Syntax *.clj RainbowParenthesesLoadSquare
 autocmd VimEnter *.scm RainbowParenthesesToggle
 autocmd Syntax *.scm RainbowParenthesesLoadRound
 
-" git gutter
-set updatetime=100
-
 " cmds
 command! LoadInGHCi call LoadInGHCi()
 command! Vterm vsplit | terminal
@@ -230,6 +228,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
 " git gutter
+set updatetime=100
 let g:gitgutter_sign_added = '•'
 let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
