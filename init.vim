@@ -135,6 +135,7 @@ set wildmenu
 set guicursor=
 set laststatus=2
 set noshowmode
+set number
 
 " keymap
 noremap 0 ^
