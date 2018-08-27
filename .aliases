@@ -8,6 +8,7 @@ alias acme='acme -a -f /mnt/font/Go\ Mono/10a/font'
 alias c=clear
 alias vim=vim
 alias v=vim
+alias gv='gvim & disown'
 alias todo='v ~/.todo'
 alias o=xdg-open
 alias c=cat

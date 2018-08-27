@@ -9,6 +9,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -26,6 +27,8 @@ Plug 'fatih/vim-go'
 
 " haskell
 Plug 'neovimhaskell/haskell-vim'
+Plug 'andy-morris/happy.vim'
+Plug 'andy-morris/alex.vim'
 
 " javascript
 Plug 'pangloss/vim-javascript'
@@ -84,10 +87,10 @@ endif
 
 " Visual settings
 syntax on
-" let g:jellybeans_overrides = {
-" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none' },
-" \}
-colorscheme onedark
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': '000000' },
+\}
+colorscheme jellybeans
 set termguicolors
 set ruler
 set showmatch
@@ -95,12 +98,22 @@ set showcmd
 set wildmenu
 set number
 highlight ExtraWhitespace guibg=#ff5555
-match ExtraWhitespace /\s\+$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+if has('gui_running')
+    set guifont=FiraCode\ 10
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set lines=42 columns=170
+    set guicursor+=a:blinkon0
+endif
 
 " Keymaps
 let mapleader="\<Space>"
 
 noremap 0 ^
+noremap , ;
 noremap ; :
 nnoremap j gj
 nnoremap k gk
@@ -119,10 +132,11 @@ nnoremap <Leader>h :split
 nnoremap <c-p> :FZF<cr>
 nnoremap <Leader>b :Buffers<cr>
 
-nnoremap <c-h> <c-w><c-h>
-nnoremap <c-j> <c-w><c-j>
-nnoremap <c-k> <c-w><c-k>
-nnoremap <c-l> <c-w><c-l>
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 tnoremap jk <c-\><c-n>
 
