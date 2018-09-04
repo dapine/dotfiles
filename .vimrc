@@ -33,6 +33,8 @@ Plug 'andy-morris/alex.vim'
 " javascript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'alunny/pegjs-vim'
+Plug 'digitaltoad/vim-pug'
 
 " elixir
 Plug 'elixir-editors/vim-elixir'
@@ -143,6 +145,7 @@ tnoremap jk <c-\><c-n>
 " Language settings
 " javascript
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType pug setlocal shiftwidth=2 tabstop=2
 
 " html
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
