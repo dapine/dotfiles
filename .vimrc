@@ -78,7 +78,7 @@ set synmaxcol=180
 set lazyredraw
 set laststatus=1
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*/node_modules/*,*/deps/*,*/_build/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*/node_modules/*,*/deps/*,*/_build/*,*.cmi,*cmo
 
 set splitbelow
 set splitright
@@ -89,11 +89,13 @@ endif
 
 " Visual settings
 syntax on
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': '000000' },
-\}
-colorscheme jellybeans
-set termguicolors
+" let g:jellybeans_overrides = {
+" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': '000000' },
+" \}
+" colorscheme jellybeans
+colorscheme solarized
+set background=light
+" set termguicolors
 set ruler
 set showmatch
 set showcmd

@@ -25,3 +25,5 @@ export NVIM_PYTHON_LOG_LEVEL=DEBUG
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH=$HOME/code/flutter/bin:$PATH
+
+export DATADIR=$HOME/data
