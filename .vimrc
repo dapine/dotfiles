@@ -10,10 +10,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ludovicchabant/vim-gutentags'
 
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+" completion
+Plug 'maralla/completor.vim'
 
 " visual
 Plug 'tomasr/molokai'
@@ -21,6 +25,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'AlessandroYorba/Alduin'
 
 " go
 Plug 'fatih/vim-go'
@@ -93,9 +98,9 @@ syntax on
 " \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': '000000' },
 " \}
 " colorscheme jellybeans
-colorscheme solarized
-set background=light
-" set termguicolors
+let g:alduin_Shout_Become_Ethereal = 1
+colorscheme alduin
+set termguicolors
 set ruler
 set showmatch
 set showcmd
@@ -182,3 +187,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Commands
 command! Vterm vs | terminal ++curwin
+
+" completion
+let g:completor_node_binary = '/usr/local/bin/tern'
