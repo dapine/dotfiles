@@ -49,6 +49,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 
+" rust
+Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 " Basic settings
@@ -99,6 +102,7 @@ syntax on
 " \}
 " colorscheme jellybeans
 let g:alduin_Shout_Become_Ethereal = 1
+let g:alduin_Shout_Animal_Allegiance = 1
 colorscheme alduin
 set termguicolors
 set ruler
@@ -190,3 +194,6 @@ command! Vterm vs | terminal ++curwin
 
 " completion
 let g:completor_node_binary = '/usr/local/bin/tern'
+
+" rust.vim
+let g:rustfmt_autosave = 1
