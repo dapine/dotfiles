@@ -7,25 +7,20 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'matze/vim-move'
-Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ludovicchabant/vim-gutentags'
 
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" completion
-Plug 'maralla/completor.vim'
-
 " visual
 Plug 'tomasr/molokai'
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'AlessandroYorba/Alduin'
+
+" stats
+Plug 'wakatime/vim-wakatime'
 
 " go
 Plug 'fatih/vim-go'
@@ -51,6 +46,9 @@ Plug 'tpope/vim-rails'
 
 " rust
 Plug 'rust-lang/rust.vim'
+
+" latex
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -80,6 +78,8 @@ set smartcase
 
 set completeopt-=preview
 
+set path+=**
+
 set nocursorline
 set nocursorcolumn
 set synmaxcol=180
@@ -97,14 +97,9 @@ endif
 
 " Visual settings
 syntax on
-" let g:jellybeans_overrides = {
-" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': '000000' },
-" \}
-" colorscheme jellybeans
-let g:alduin_Shout_Become_Ethereal = 1
-let g:alduin_Shout_Animal_Allegiance = 1
-colorscheme alduin
 set termguicolors
+set background=light
+colorscheme solarized8_flat
 set ruler
 set showmatch
 set showcmd
@@ -113,12 +108,10 @@ set number
 highlight ExtraWhitespace guibg=#ff5555
 au InsertLeave * match ExtraWhitespace /\s\+$/
 if has('gui_running')
-    set guifont=FiraCode\ 10
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    set lines=42 columns=170
     set guicursor+=a:blinkon0
 endif
 
@@ -157,6 +150,7 @@ tnoremap jk <c-\><c-n>
 " javascript
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType pug setlocal shiftwidth=2 tabstop=2
+autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
 
 " html
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
@@ -191,9 +185,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Commands
 command! Vterm vs | terminal ++curwin
-
-" completion
-let g:completor_node_binary = '/usr/local/bin/tern'
 
 " rust.vim
 let g:rustfmt_autosave = 1
