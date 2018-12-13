@@ -50,6 +50,9 @@ Plug 'rust-lang/rust.vim'
 " latex
 Plug 'lervag/vimtex'
 
+" reasonml
+Plug 'reasonml-editor/vim-reason-plus'
+
 call plug#end()
 
 " Basic settings
