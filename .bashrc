@@ -9,3 +9,4 @@ PS1='[\u@\h \W]\$ '
 
 source ~/.aliases
 source ~/.exports
+source ~/.functions

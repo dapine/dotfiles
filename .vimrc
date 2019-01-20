@@ -19,9 +19,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 
-" stats
-Plug 'wakatime/vim-wakatime'
-
 " go
 Plug 'fatih/vim-go'
 

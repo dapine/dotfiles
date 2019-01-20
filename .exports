@@ -1,13 +1,7 @@
-export PLAN9=/usr/local/plan9
-PATH=$PATH:$PLAN9/bin
-
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
-
-export GEM_HOME=$HOME/.gem/ruby/2.3.0
-PATH=$PATH:$GEM_HOME/bin
 
 export CABAL=$HOME/.cabal
 PATH=$PATH:$CABAL/bin
@@ -19,11 +13,6 @@ PATH=$PATH:$HOME/.local/bin
 
 PATH=$PATH:$HOME/.config/composer/vendor/bin
 
-export NVIM_PYTHON_LOG_FILE=/tmp/log
-export NVIM_PYTHON_LOG_LEVEL=DEBUG
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export PATH=$HOME/code/flutter/bin:$PATH
-
-export DATADIR=$HOME/data
+export DOTFILES=$HOME/code/dotfiles
