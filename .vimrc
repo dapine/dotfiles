@@ -18,6 +18,7 @@ Plug 'tomasr/molokai'
 Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'dylanaraps/wal.vim'
 
 " go
 Plug 'fatih/vim-go'
@@ -98,8 +99,7 @@ endif
 " Visual settings
 syntax on
 set termguicolors
-set background=light
-colorscheme solarized8_flat
+colorscheme wal
 set ruler
 set showmatch
 set showcmd
