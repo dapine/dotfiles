@@ -4,13 +4,6 @@ sxhkd &
 
 $HOME/.config/polybar/launch.sh
 
-urxvtd -q -f -o
-
-compton &
-
-wal -i ~/Pictures/wallpapers/ &
-xrdb -merge ~/.Xresources
-
 . "${HOME}/.cache/wal/colors.sh"
 
 bspc monitor -d code web III IV V VI

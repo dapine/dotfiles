@@ -98,7 +98,7 @@ endif
 
 " Visual settings
 syntax on
-set termguicolors
+" set termguicolors
 colorscheme wal
 set ruler
 set showmatch
