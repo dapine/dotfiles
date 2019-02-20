@@ -7,6 +7,7 @@ export CABAL=$HOME/.cabal
 PATH=$PATH:$CABAL/bin
 
 export editor=vim
+export pager=less
 export TERM=xterm-256color
 
 PATH=$PATH:$HOME/.local/bin

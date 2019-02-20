@@ -9,3 +9,4 @@ alias gv='gvim & disown'
 alias todo='v ~/.todo'
 alias o=xdg-open
 alias c=cat
+alias f=lf
