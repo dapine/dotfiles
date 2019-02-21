@@ -110,7 +110,11 @@ type = internal/bspwm
 
 ws-icon-0 = code;
 ws-icon-1 = web;
-ws-icon-default = 
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-default = 
 
 format = <label-state> <label-mode>
 
