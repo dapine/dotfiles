@@ -1,3 +1,5 @@
+set ratios '1:2'
+
 map ; read
 map <delete> delete
 map <enter> open

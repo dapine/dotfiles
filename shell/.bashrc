@@ -124,3 +124,5 @@ source ~/.funcs
 
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
+
+eval "$(rbenv init -)"
