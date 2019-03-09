@@ -7,6 +7,7 @@ alias grep='grep --color=auto'
 alias v=vim
 alias gv='gvim & disown'
 alias todo='v ~/.todo'
+alias xdg-open=sx-open
 alias o=xdg-open
 alias c=cat
 alias f=lf
