@@ -99,14 +99,13 @@ if has("mouse")
 endif
 
 " Visual settings
-syntax on
+syntax off
 " set termguicolors
-colorscheme wal
 set ruler
 set showmatch
 set showcmd
 set wildmenu
-set number
+" set number
 highlight ExtraWhitespace guibg=#ff5555
 au InsertLeave * match ExtraWhitespace /\s\+$/
 if has('gui_running')
