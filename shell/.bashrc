@@ -122,7 +122,12 @@ source ~/.funcs
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+if [ $WAL ]
+then
+    source ~/.cache/wal/colors-tty.sh
+    (cat ~/.cache/wal/sequences &)
+else
+    source "$HOME/.themes/$THEME/colors-tty.sh"
+fi
 
 eval "$(rbenv init -)"

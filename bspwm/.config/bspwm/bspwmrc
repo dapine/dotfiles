@@ -1,10 +1,15 @@
-#! /bin/sh
+#!/bin/sh
 
 sxhkd &
 
 $HOME/.config/polybar/launch.sh
 
-. "${HOME}/.cache/wal/colors.sh"
+if [ $WAL ]
+then
+    . "${HOME}/.cache/wal/colors.sh"
+else
+    . "${HOME}/.themes/$THEME/colors.sh"
+fi
 
 bspc monitor -d code web III IV V VI
 

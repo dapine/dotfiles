@@ -99,16 +99,16 @@ if has("mouse")
 endif
 
 " Visual settings
-syntax on
+syntax off
 " set termguicolors
-colorscheme wal
 set ruler
 set showmatch
 set showcmd
 set wildmenu
-set number
 highlight ExtraWhitespace guibg=#ff5555
 au InsertLeave * match ExtraWhitespace /\s\+$/
+hi MatchParen cterm=none ctermbg=gray ctermfg=none
+hi Visual ctermbg=gray
 if has('gui_running')
     set guioptions-=m
     set guioptions-=T
