@@ -1,14 +1,15 @@
-export PATH=$PATH:/usr/local/go/bin
+export TERM=xterm-256color
+export OPENER=sx-open
+export BROWSER=surf
+export EDITOR=vim
+export DOTFILES=$HOME/c/dotfiles
 
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
 export CABAL=$HOME/.cabal
 PATH=$PATH:$CABAL/bin
-
-export editor=vim
-export pager=less
-export TERM=xterm-256color
 
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.bin
@@ -17,10 +18,5 @@ PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export DOTFILES=$HOME/c/dotfiles
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-export OPENER=sx-open
-
-export THEME=yellow

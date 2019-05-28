@@ -105,9 +105,9 @@ set ruler
 set showmatch
 set showcmd
 set wildmenu
-highlight ExtraWhitespace guibg=#ff5555
+highlight ExtraWhitespace guibg=#ff5555 ctermbg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-hi MatchParen cterm=none ctermbg=gray ctermfg=none
+" hi MatchParen cterm=none ctermbg=gray ctermfg=none
 hi Visual ctermbg=gray
 if has('gui_running')
     set guioptions-=m
