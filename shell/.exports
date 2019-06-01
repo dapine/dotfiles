@@ -3,6 +3,7 @@ export OPENER=sx-open
 export BROWSER=surf
 export EDITOR=vim
 export DOTFILES=$HOME/c/dotfiles
+export TERMINAL=st
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
