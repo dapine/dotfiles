@@ -4,6 +4,8 @@ export BROWSER=surf
 export EDITOR=vim
 export DOTFILES=$HOME/c/dotfiles
 export TERMINAL=st
+export FILEBROWSER=vifm
+export WM=bspwm
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
@@ -21,3 +23,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+export PATH="$HOME/.mlton/bin:$PATH"
