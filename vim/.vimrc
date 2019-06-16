@@ -23,35 +23,13 @@ Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 
 " go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " haskell
-Plug 'neovimhaskell/haskell-vim'
-Plug 'andy-morris/happy.vim'
-Plug 'andy-morris/alex.vim'
-
-" javascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'alunny/pegjs-vim'
-Plug 'digitaltoad/vim-pug'
-
-" elixir
-Plug 'elixir-editors/vim-elixir'
-
-" ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-
-" rust
-Plug 'rust-lang/rust.vim'
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 " latex
 Plug 'lervag/vimtex'
-
-" reasonml
-Plug 'reasonml-editor/vim-reason-plus'
 
 call plug#end()
 
@@ -179,6 +157,7 @@ let g:fzf_action = {
 " nerdtree
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " ultisnips
 " let g:UltiSnipsExpandTrigger="<tab>"
@@ -187,6 +166,3 @@ let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
 
 " Commands
 command! Vterm vs | terminal ++curwin
-
-" rust.vim
-let g:rustfmt_autosave = 1
