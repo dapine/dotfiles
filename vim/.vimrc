@@ -23,10 +23,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 
 " go
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go'
 
 " haskell
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim'
 
 " latex
 Plug 'lervag/vimtex'

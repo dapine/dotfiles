@@ -5,7 +5,7 @@ export EDITOR=vim
 export DOTFILES=$HOME/c/dotfiles
 export TERMINAL=st
 export FILEBROWSER=vifm
-export WM=openbox-session
+export WM=bspwm
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
