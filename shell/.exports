@@ -4,7 +4,7 @@ export BROWSER=surf
 export EDITOR=vim
 export DOTFILES=$HOME/c/dotfiles
 export TERMINAL=st
-export FILEBROWSER=vifm
+export FILEBROWSER=thunar
 export WM=bspwm
 
 export PATH=$PATH:/usr/local/go/bin
