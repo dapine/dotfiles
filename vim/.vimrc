@@ -21,6 +21,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
+Plug 'dylanaraps/wal.vim'
 
 " go
 Plug 'fatih/vim-go'
@@ -94,6 +95,10 @@ if has('gui_running')
     set guioptions-=L
     set guicursor+=a:blinkon0
 endif
+if $PYWAL
+    syntax on
+    colorscheme wal
+endif
 
 " Keymaps
 let mapleader="\<Space>"
@@ -158,6 +163,8 @@ let g:fzf_action = {
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let g:NERDTreeWinSize = 50
+let NERDTreeMinimalUI = 1
 
 " ultisnips
 " let g:UltiSnipsExpandTrigger="<tab>"
