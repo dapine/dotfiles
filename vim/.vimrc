@@ -8,12 +8,13 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
-
-" snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+
+" snippets
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 " visual
 Plug 'tomasr/molokai'
@@ -21,6 +22,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
+Plug 'morhetz/gruvbox'
 
 " go
 Plug 'fatih/vim-go'
@@ -72,27 +74,34 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.hi,*.o,*/node_modules/*,*/deps/
 set splitbelow
 set splitright
 
+set clipboard=unnamed
+
 if has("mouse")
     set mouse=a
 endif
 
 " Visual settings
 syntax off
-" set termguicolors
 set ruler
 set showmatch
 set showcmd
 set wildmenu
 highlight ExtraWhitespace guibg=#ff5555 ctermbg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-" hi MatchParen cterm=none ctermbg=gray ctermfg=none
-hi Visual ctermbg=gray
 if has('gui_running')
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
+    highlight ExtraWhitespace guibg=#ff5555 ctermbg=red
     set guicursor+=a:blinkon0
+    syntax on
+    set background=dark
+    let g:gruvbox_contrast_dark='hard'
+    colorscheme gruvbox
+    inoremap <C-S-v> <ESC>"+pa
+    vnoremap <C-S-c> "+y
+    vnoremap <C-S-d> "+d
 endif
 
 " Keymaps
@@ -105,14 +114,20 @@ nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap <A-j> :m +1<cr>
+nnoremap <A-k> :m -2<cr>
 
 inoremap jk <esc>
 inoremap <c-d> <del>
 
 vnoremap j gj
 vnoremap k gk
+" not working for arbitrary number of lines
+vnoremap <A-j> :m +1<cr> gv
+vnoremap <A-k> :m -2<cr> gv
 
 nnoremap <Leader>n :NERDTreeToggle<cr>
+nnoremap <C-n> :NERDTreeToggle<cr>
 nnoremap <Leader>v :vsplit
 nnoremap <Leader>h :split
 nnoremap <c-p> :FZF<cr>
@@ -151,18 +166,22 @@ let g:SuperTabContextDefaultCompletionType = "<c-n>"
 " fzf.vim
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
+  \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeDirArrowExpandable = ' '
+let g:NERDTreeDirArrowCollapsible = ' '
 
 " ultisnips
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Commands
 command! Vterm vs | terminal ++curwin
