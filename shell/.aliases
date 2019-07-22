@@ -10,9 +10,13 @@ alias todo='v ~/.todo'
 alias xdg-open=sx-open
 alias o=xdg-open
 alias c=cat
-alias f=lf
 alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'
 alias xq='sudo xbps-query'
 alias xr='sudo xbps-remove -R'
 alias extar='tar -xvf'
+
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}

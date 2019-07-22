@@ -23,6 +23,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
 
 " go
 Plug 'fatih/vim-go'
@@ -174,9 +175,10 @@ let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrowExpandable = ' '
 let g:NERDTreeDirArrowCollapsible = ' '
+let g:NERDTreeWinSize = 50
+let g:NERDTreeMinimalUI = 1
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
