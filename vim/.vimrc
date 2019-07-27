@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+Plug 'matze/vim-move'
 
 " snippets
 Plug 'garbas/vim-snipmate'
@@ -23,7 +24,6 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'morhetz/gruvbox'
-Plug 'dylanaraps/wal.vim'
 
 " go
 Plug 'fatih/vim-go'
@@ -115,17 +115,12 @@ nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
 nnoremap N Nzz
-nnoremap <A-j> :m +1<cr>
-nnoremap <A-k> :m -2<cr>
 
 inoremap jk <esc>
 inoremap <c-d> <del>
 
 vnoremap j gj
 vnoremap k gk
-" not working for arbitrary number of lines
-vnoremap <A-j> :m +1<cr> gv
-vnoremap <A-k> :m -2<cr> gv
 
 nnoremap <Leader>n :NERDTreeToggle<cr>
 nnoremap <C-n> :NERDTreeToggle<cr>
@@ -169,6 +164,23 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+" Customize fzf colors to match your color scheme
+" https://github.com/morhetz/gruvbox/issues/207
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
