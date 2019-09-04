@@ -11,6 +11,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'matze/vim-move'
+Plug 'ap/vim-buftabline'
 
 " snippets
 Plug 'garbas/vim-snipmate'
@@ -82,7 +83,10 @@ if has("mouse")
 endif
 
 " Visual settings
-syntax off
+syntax on
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 set ruler
 set showmatch
 set showcmd
@@ -128,6 +132,8 @@ nnoremap <Leader>v :vsplit
 nnoremap <Leader>h :split
 nnoremap <c-p> :FZF<cr>
 nnoremap <Leader>b :Buffers<cr>
+nnoremap <C-i> :bprevious<cr>
+nnoremap <C-o> :bnext<cr>
 
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
