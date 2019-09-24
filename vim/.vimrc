@@ -25,6 +25,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'morhetz/gruvbox'
+Plug 'olivertaylor/vacme'
 
 " go
 Plug 'fatih/vim-go'
@@ -82,11 +83,14 @@ if has("mouse")
     set mouse=a
 endif
 
+set hidden
+
 " Visual settings
-syntax on
-set background=dark
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+syntax off
+" set background=light
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_contrast_light='hard'
+colorscheme vacme
 set ruler
 set showmatch
 set showcmd
@@ -134,6 +138,7 @@ nnoremap <c-p> :FZF<cr>
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <C-i> :bprevious<cr>
 nnoremap <C-o> :bnext<cr>
+nnoremap <Leader>q :bw<cr>
 
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
@@ -190,7 +195,7 @@ let g:fzf_colors =
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
-let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build']
+let g:NERDTreeIgnore = ['node_modules', 'deps', 'dist', '_build', '\.cmi$', '\.cmo$']
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeDirArrowExpandable = ' '
@@ -202,6 +207,9 @@ let g:NERDTreeMinimalUI = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" vim-commentary
+autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
 
 " Commands
 command! Vterm vs | terminal ++curwin
