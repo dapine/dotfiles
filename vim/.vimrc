@@ -5,18 +5,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'matze/vim-move'
 Plug 'ap/vim-buftabline'
-
-" snippets
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
 
 " visual
 Plug 'tomasr/molokai'
@@ -26,15 +16,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'morhetz/gruvbox'
 Plug 'olivertaylor/vacme'
-
-" go
-Plug 'fatih/vim-go'
-
-" haskell
-Plug 'neovimhaskell/haskell-vim'
-
-" latex
-Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -87,9 +68,6 @@ set hidden
 
 " Visual settings
 syntax off
-" set background=light
-" let g:gruvbox_contrast_dark='hard'
-" let g:gruvbox_contrast_light='hard'
 colorscheme vacme
 set ruler
 set showmatch
@@ -164,34 +142,8 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 
 " Plugins settings
-" vim-go
-let g:go_fmt_command = "goimports"
-
 " supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
-" fzf.vim
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-" Customize fzf colors to match your color scheme
-" https://github.com/morhetz/gruvbox/issues/207
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
@@ -202,11 +154,6 @@ let g:NERDTreeDirArrowExpandable = ' '
 let g:NERDTreeDirArrowCollapsible = ' '
 let g:NERDTreeWinSize = 50
 let g:NERDTreeMinimalUI = 1
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " vim-commentary
 autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
