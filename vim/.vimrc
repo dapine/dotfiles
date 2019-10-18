@@ -9,13 +9,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ap/vim-buftabline'
 
 " visual
-Plug 'tomasr/molokai'
-Plug 'lifepillar/vim-solarized8'
-Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'dylanaraps/wal.vim'
-Plug 'morhetz/gruvbox'
 Plug 'olivertaylor/vacme'
+Plug 'dapine/gruvbox-minimal'
 
 call plug#end()
 
@@ -67,8 +63,9 @@ endif
 set hidden
 
 " Visual settings
-syntax off
-colorscheme vacme
+syntax on
+colorscheme gruvbox-minimal
+set termguicolors
 set ruler
 set showmatch
 set showcmd
@@ -80,12 +77,9 @@ if has('gui_running')
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    highlight ExtraWhitespace guibg=#ff5555 ctermbg=red
     set guicursor+=a:blinkon0
     syntax on
-    set background=dark
-    let g:gruvbox_contrast_dark='hard'
-    colorscheme gruvbox
+    colorscheme gruvbox-minimal
     inoremap <C-S-v> <ESC>"+pa
     vnoremap <C-S-c> "+y
     vnoremap <C-S-d> "+d
@@ -110,13 +104,14 @@ vnoremap k gk
 
 nnoremap <Leader>n :NERDTreeToggle<cr>
 nnoremap <C-n> :NERDTreeToggle<cr>
-nnoremap <Leader>v :vsplit
-nnoremap <Leader>h :split
-nnoremap <c-p> :FZF<cr>
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <C-i> :bprevious<cr>
 nnoremap <C-o> :bnext<cr>
 nnoremap <Leader>q :bw<cr>
+nnoremap <Leader>e :e **/*
+nnoremap <Leader>v :vs **/*
+nnoremap <Leader>h :sp **/*
+
 
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
