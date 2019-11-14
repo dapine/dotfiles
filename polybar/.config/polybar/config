@@ -17,21 +17,13 @@
 ;==========================================================
 
 [colors]
-; background = #1d2021
-; background-alt = #282828
-; foreground = #ebdbb2
-; foreground-alt = #a89984
-; primary = #fabd2f
-; secondary = #b8bb26
-; alert = #fb4934
-
-background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color0:#222}
-foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color7:#222}
-primary = ${xrdb:color1:#222}
-secondary = ${xrdb:color2:#222}
-alert = ${xrdb:color3:#222}
+background = #1d2021
+background-alt = #282828
+foreground = #ebdbb2
+foreground-alt = #a89984
+primary = #fabd2f
+secondary = #b8bb26
+alert = #fb4934
 
 [bar/dapine]
 ;monitor = ${env:MONITOR:HDMI-1}

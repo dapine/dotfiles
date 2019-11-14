@@ -4,14 +4,11 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	st
 
 # program launcher
 super + space
-    rofi -show run
-
-super + shift + space
-    rofi -show
+    dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -146,5 +143,5 @@ XF86MonBrightnessDown
     xbacklight -dec 10
 
 # my chrods
-super + e; {w,t,f,d}
-    {qutebrowser, $TERMINAL, thunar, duckduck}
+super + e; {w,f}
+    {qutebrowser, st -e ranger}
