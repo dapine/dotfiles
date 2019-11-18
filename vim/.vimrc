@@ -136,6 +136,9 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 " json
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 
+" ocaml
+autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2
+
 " Plugins settings
 " supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
