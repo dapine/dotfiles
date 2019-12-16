@@ -65,7 +65,6 @@ set hidden
 " Visual settings
 syntax on
 colorscheme gruvbox-minimal
-set termguicolors
 set ruler
 set showmatch
 set showcmd
