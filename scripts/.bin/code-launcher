@@ -1,0 +1,3 @@
+#!/bin/sh
+
+alacritty --working-directory "$HOME/c/`ls ~/c | rofi -dmenu`" -e vim

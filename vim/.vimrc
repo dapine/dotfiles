@@ -65,6 +65,7 @@ set hidden
 " Visual settings
 syntax on
 colorscheme gruvbox-minimal
+set termguicolors
 set ruler
 set showmatch
 set showcmd
@@ -90,6 +91,7 @@ let mapleader="\<Space>"
 noremap 0 ^
 noremap , ;
 noremap ; :
+noremap - *
 nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
@@ -121,22 +123,14 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 tnoremap jk <c-\><c-n>
 
 " Language settings
-" javascript
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType pug setlocal shiftwidth=2 tabstop=2
 autocmd FileType ejs setlocal shiftwidth=2 tabstop=2
-
-" html
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
-
-" xml
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
-
-" json
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
-
-" ocaml
 autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType elixir setlocal shiftwidth=2 tabstop=2
 
 " Plugins settings
 " supertab
