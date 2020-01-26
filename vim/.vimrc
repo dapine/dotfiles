@@ -132,6 +132,9 @@ autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType elixir setlocal shiftwidth=2 tabstop=2
 
+" Snippets
+source $HOME/.vim/snippets/snippets.vim
+
 " Plugins settings
 " supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
