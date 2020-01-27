@@ -5,6 +5,7 @@ alias la='ls -a'
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias v=vim
+alias bv='export bloat=1; vim'
 alias gv='gvim & disown'
 alias todo='v ~/.todo'
 alias xdg-open=sx-open

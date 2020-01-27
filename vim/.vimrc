@@ -154,3 +154,12 @@ autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
 
 " Commands
 command! Vterm vs | terminal ++curwin
+
+" Bloat (here it is the doomed part of my vim config. my heart is broken,
+" but i really need this. there will be a day where bloated software will be
+" purged outta earth. on that day, my kid... we'll be free.)
+if !empty($bloat)
+    call plug#begin('~/.vim/plugged')
+    source $HOME/.vim/lang-specific-plugins.vim
+    call plug#end()
+endif
