@@ -12,7 +12,6 @@ Plug 'ap/vim-buftabline'
 Plug 'junegunn/goyo.vim'
 Plug 'olivertaylor/vacme'
 Plug 'dapine/gruvbox-minimal'
-
 call plug#end()
 
 " Basic settings
@@ -91,7 +90,7 @@ let mapleader="\<Space>"
 noremap 0 ^
 noremap , ;
 noremap ; :
-noremap - *
+noremap s *
 nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
@@ -113,7 +112,6 @@ nnoremap <Leader>e :e **/*
 nnoremap <Leader>v :vs **/*
 nnoremap <Leader>h :sp **/*
 
-
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
@@ -131,9 +129,6 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType ocaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType elixir setlocal shiftwidth=2 tabstop=2
-
-" Snippets
-source $HOME/.vim/snippets/snippets.vim
 
 " Plugins settings
 " supertab
@@ -154,12 +149,3 @@ autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
 
 " Commands
 command! Vterm vs | terminal ++curwin
-
-" Bloat (here it is the doomed part of my vim config. my heart is broken,
-" but i really need this. there will be a day where bloated software will be
-" purged outta earth. on that day, my kid... we'll be free.)
-if !empty($bloat)
-    call plug#begin('~/.vim/plugged')
-    source $HOME/.vim/lang-specific-plugins.vim
-    call plug#end()
-endif
