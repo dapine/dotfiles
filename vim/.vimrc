@@ -5,12 +5,10 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'ap/vim-buftabline'
 
 " visual
 Plug 'junegunn/goyo.vim'
-Plug 'olivertaylor/vacme'
 Plug 'dapine/gruvbox-minimal'
 call plug#end()
 
@@ -108,15 +106,11 @@ nnoremap <Leader>b :Buffers<cr>
 nnoremap <C-i> :bprevious<cr>
 nnoremap <C-o> :bnext<cr>
 nnoremap <Leader>q :bw<cr>
-nnoremap <Leader>e :e **/*
-nnoremap <Leader>v :vs **/*
-nnoremap <Leader>h :sp **/*
 
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 tnoremap jk <c-\><c-n>
 
