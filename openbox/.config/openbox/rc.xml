@@ -347,10 +347,11 @@
         <command>rofi -show run</command>
       </action>
     </keybind>
-    <keybind key="W-c">
-      <action name="Execute">
-        <command>~/.bin/./code-launcher</command>
-      </action>
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-o">
+      <action name="ToggleDecorations"/>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
