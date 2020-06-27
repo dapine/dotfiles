@@ -79,7 +79,7 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 alt + Tab
-    bspc desktop -f last
+	bspc node -f next.local
 
 # focus the older or newer node in the focus history
 super + {o,i}
