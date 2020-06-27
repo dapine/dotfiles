@@ -10,6 +10,10 @@ super + Return
 super + space
     dmenu_run
 
+# poweroff and restart
+super + shift + q
+    ls $HOME/.bin/cmd/power | dmenu
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -144,4 +148,4 @@ XF86MonBrightnessDown
 
 # my chrods
 super + e; {w,f}
-    {qutebrowser, st -e ranger}
+    {firefox, st -e ranger}
