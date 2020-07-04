@@ -13,3 +13,7 @@ set -gx EDITOR vim
 
 set PATH $PATH $HOME/.local/bin
 set PATH $PATH $HOME/.bin
+
+set PATH $PATH $HOME/d/apache-opennlp-1.9.2/bin
+
+set PATH $PATH $HOME/.cargo/bin

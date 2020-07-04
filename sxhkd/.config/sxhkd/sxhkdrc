@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	st
+	kitty
 
 # program launcher
 super + space
@@ -148,4 +148,4 @@ XF86MonBrightnessDown
 
 # my chrods
 super + e; {w,f}
-    {firefox, st -e ranger}
+    {firefox, kitty -e ranger}
