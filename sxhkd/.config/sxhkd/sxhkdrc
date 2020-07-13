@@ -148,4 +148,4 @@ XF86MonBrightnessDown
 
 # my chrods
 super + e; {w,f}
-    {firefox, kitty -e ranger}
+    {chromium, kitty -e ranger}
