@@ -4,12 +4,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
-alias v=vim
-alias bv='export bloat=1; vim'
-alias gv='gvim & disown'
-alias todo='v ~/.todo'
-alias xdg-open=sx-open
-alias o=xdg-open
+alias v=nvim
 alias c=cat
 alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'

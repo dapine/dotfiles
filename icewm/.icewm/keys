@@ -1,0 +1,15 @@
+key "Super+T" mate-terminal
+key "Super+W" firefox
+key "Super+F" caja
+key "Super+R" dmenu_run
+
+key "Super+H" icesh -f sizeto 49% 100% top left
+key "Super+J" icesh -f sizeto 100% 49% bottom left
+key "Super+K" icesh -f sizeto 100% 49% top left
+key "Super+L" icesh -f sizeto 49% 100% top right
+
+key "Super+U" icesh -f sizeto 49% 49% top left
+key "Super+I" icesh -f sizeto 49% 49% top right
+key "Super+O" icesh -f sizeto 49% 49% bottom left
+key "Super+P" icesh -f sizeto 49% 49% bottom right
+key "Super+G" icesh -f sizeto 55% 55% center
