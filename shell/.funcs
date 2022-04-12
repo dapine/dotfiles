@@ -1,4 +1,0 @@
-function assignment {
-    mkdir $1
-    cp $DOTFILES/templates/latex/assignment/assignment.tex $1/$1.tex
-}
