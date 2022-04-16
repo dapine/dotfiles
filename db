@@ -1,0 +1,18 @@
+# this is a registry of the dotfiles paths
+
+program     src                              dest
+alacritty   $PWD/alacritty/.config/alacritty $HOME/.config/
+bspwm 	    $PWD/bspwm/.config/bspwm 	     $HOME/.config/
+compton	    $PWD/compton/.config/compton.cfg $HOME/.config/compton.cfg
+dunst	    $PWD/dunst/.config/dunst         $HOME/.config/
+icewm	    $PWD/icewm/.icewm                $HOME/
+openbox	    $PWD/openbox/.config/openbox     $HOME/.config/
+polybar	    $PWD/polybar/.config/polybar     $HOME/.config/
+rofi	    $PWD/rofi/.config/rofi           $HOME/.config/
+sxhkd	    $PWD/sxhkd/.config/sxhkd         $HOME/.config/
+bashrc	    $PWD/shell/.bashrc               $HOME/
+bashaliases $PWD/shell/.bash_aliases         $HOME/
+inputrc	    $PWD/shell/.inputrc              $HOME/
+tint2	    $PWD/tint2/.config/tint2         $HOME/.config/
+tmux	    $PWD/tmux/.tmux.conf             $HOME/.tmux.conf
+zathura	    $PWD/zathura/.config/zathura     $HOME/.config/
