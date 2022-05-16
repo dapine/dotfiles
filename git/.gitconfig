@@ -1,0 +1,7 @@
+[user]
+	name = Breno Pinheiro
+	email = davepinh@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vi

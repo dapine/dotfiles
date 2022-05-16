@@ -16,3 +16,4 @@ inputrc	    $PWD/shell/.inputrc              $HOME/
 tint2	    $PWD/tint2/.config/tint2         $HOME/.config/
 tmux	    $PWD/tmux/.tmux.conf             $HOME/.tmux.conf
 zathura	    $PWD/zathura/.config/zathura     $HOME/.config/
+git	        $PWD/git/.gitconfig              $HOME/
