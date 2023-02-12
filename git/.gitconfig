@@ -5,3 +5,11 @@
 	defaultBranch = main
 [core]
 	editor = vi
+[alias]
+    a = add
+    c = commit
+    s = status --short
+    co = checkout
+    b = branch
+    l = log --oneline
+    d = diff
