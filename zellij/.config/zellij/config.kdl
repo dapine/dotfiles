@@ -185,8 +185,8 @@ pane_frames false
 auto_layout true
 
 theme "catppuccin-mocha"
-default_layout "compact"
-// default_layout "default"
+// default_layout "compact"
+default_layout "default"
 default_mode "normal"
 mouse_mode true
 copy_on_select true
