@@ -14,3 +14,4 @@ alias ai='sudo apt install'
 alias au='sudo apt update'
 alias ar='sudo apt remove'
 alias extar='tar -xvf'
+alias z=zellij

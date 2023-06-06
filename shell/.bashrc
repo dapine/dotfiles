@@ -45,4 +45,3 @@ bind '"jk":vi-movement-mode'
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-source ~/.exports
