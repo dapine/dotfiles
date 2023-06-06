@@ -1,6 +1,6 @@
 layout {
     pane split_direction="vertical" {
-        pane { edit "src/main.rs"; size "60%"; }
+        pane { command "nvim"; size "60%"; }
         pane split_direction="horizontal" {
             cargo { args "run"; size "60%"; }
 	    pane
