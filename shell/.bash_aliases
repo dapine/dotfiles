@@ -15,3 +15,6 @@ alias au='sudo apt update'
 alias ar='sudo apt remove'
 alias extar='tar -xvf'
 alias z=zellij
+
+alias zr='zellij action new-tab -l rust'
+alias zjr='zellij action new-tab -l js'
