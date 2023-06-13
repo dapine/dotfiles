@@ -18,3 +18,4 @@ tmux	    $PWD/tmux/.tmux.conf             $HOME/.tmux.conf
 zathura	    $PWD/zathura/.config/zathura     $HOME/.config/
 git	        $PWD/git/.gitconfig              $HOME/
 zellij	    $PWD/zellij/.config/zellij       $HOME/.config/
+wezterm	    $PWD/wezterm/.config/wezterm       $HOME/.config/
