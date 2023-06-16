@@ -1,5 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=bspwm
-Comment=bspwm
-Exec=/etc/X11/Xsession

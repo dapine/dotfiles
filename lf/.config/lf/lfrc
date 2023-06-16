@@ -1,7 +1,0 @@
-set ratios '1:2'
-
-map ; read
-map <delete> delete
-map <enter> open
-map a push %touch<space>
-map A push %mkdir<space>-p<space>

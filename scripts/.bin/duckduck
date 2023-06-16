@@ -1,4 +1,0 @@
-#!/bin/sh
-# Searches on DuckDuckGo using default browser from dmenu
-
-$BROWSER "$(echo 'https://duckduckgo.com/?q='$(> /dev/null | dmenu -p "DuckDuckGo search:"))"
