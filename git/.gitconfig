@@ -11,5 +11,6 @@
     s = status --short
     co = checkout
     b = branch
-    l = log --oneline
+    l = log --oneline --no-merges
+    ld = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     d = diff
