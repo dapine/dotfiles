@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local config = {}
 
-local cs = "Catppuccin Mocha"
+local cs = "Modus-Operandi"
 local slash = package.config:sub(1, 1)
 local my_os = slash == "/" and "unix" or "windows"
 
