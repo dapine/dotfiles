@@ -3,13 +3,10 @@ local act = wezterm.action
 local config = {}
 
 local cs = "Modus-Operandi"
-local slash = package.config:sub(1, 1)
-local my_os = slash == "/" and "unix" or "windows"
-
 local scheme = wezterm.get_builtin_color_schemes()[cs]
 
 config = {
-	font = wezterm.font("Fira Code"),
+	font = wezterm.font_with_fallback({ "Fira Code", "Noto Sans" }),
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	enable_scroll_bar = true,
 	use_fancy_tab_bar = false,
@@ -21,19 +18,6 @@ config = {
 	},
 	color_scheme = cs,
 }
-
-if my_os == "windows" then
-	config.wsl_domains = {
-		{
-			name = "WSL:Ubuntu",
-			distribution = "Ubuntu",
-			username = "d",
-			default_cwd = "~",
-			default_prog = { "bash" },
-		},
-	}
-	config.default_domain = "WSL:Ubuntu"
-end
 
 config.keys = {
 	{ key = "t", mods = "ALT", action = act.SpawnTab("CurrentPaneDomain") },
@@ -47,6 +31,11 @@ config.keys = {
 	{ key = "z", mods = "ALT", action = act.TogglePaneZoomState },
 	{ key = "[", mods = "ALT", action = act.ActivateTabRelative(-1) },
 	{ key = "]", mods = "ALT", action = act.ActivateTabRelative(1) },
+	{
+		key = "c",
+		mods = "ALT",
+		action = act.ClearScrollback("ScrollbackAndViewport"),
+	},
 }
 
 config.key_tables = {
@@ -61,7 +50,7 @@ config.key_tables = {
 	},
 }
 
-function tab_title(tab_info)
+local function tab_title(tab_info)
 	local title = tab_info.tab_title
 	if title and #title > 0 then
 		return title
