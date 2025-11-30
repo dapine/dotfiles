@@ -6,7 +6,7 @@ local cs = "Modus-Operandi"
 local scheme = wezterm.get_builtin_color_schemes()[cs]
 
 config = {
-	font = wezterm.font_with_fallback({ "Fira Code", "Noto Sans" }),
+	font = wezterm.font_with_fallback({ "JetBrains Mono", "Noto Sans" }),
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	enable_scroll_bar = true,
 	use_fancy_tab_bar = false,
@@ -18,6 +18,28 @@ config = {
 	},
 	color_scheme = cs,
 }
+
+if cs == "Modus-Operandi" then
+	config.colors = {
+		scrollbar_thumb = scheme.brights[1],
+		tab_bar = {
+			background = scheme.brights[1],
+			active_tab = {
+				bg_color = scheme.ansi[1],
+				fg_color = "#000000",
+				intensity = "Bold",
+			},
+			inactive_tab = {
+				bg_color = scheme.brights[1],
+				fg_color = "#000000",
+			},
+			new_tab = {
+				bg_color = scheme.brights[1],
+				fg_color = "#000000",
+			},
+		},
+	}
+end
 
 config.keys = {
 	{ key = "t", mods = "ALT", action = act.SpawnTab("CurrentPaneDomain") },
