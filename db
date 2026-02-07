@@ -7,3 +7,4 @@ inputrc	    $PWD/shell/.inputrc              $HOME/
 git	        $PWD/git/.gitconfig              $HOME/
 wezterm	    $PWD/wezterm/.config/wezterm       $HOME/.config/
 niri	    $PWD/niri/.config/niri       $HOME/.config/
+waybar	    $PWD/waybar/.config/waybar       $HOME/.config/
