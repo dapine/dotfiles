@@ -36,6 +36,10 @@ input {
     }
 }
 
+cursor {
+    hide-when-typing
+}
+
 /-output "eDP-1" {
     // off
 
