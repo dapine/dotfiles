@@ -1,15 +1,15 @@
 <labwc_config>
 
   <theme>
-    <!-- <name>Clearlooks-3.4</name> -->
+    <name>labTeallach</name>
     <cornerRadius>8</cornerRadius>
-    <font name="sans" size="10" />
+    <font name="sans" size="12" />
   </theme>
 
   <keyboard>
     <default />
     <keybind key="W-t">
-      <action name="Execute" command="foot" />
+      <action name="Execute" command="wezterm-gui" />
     </keybind>
     <keybind key="W-f">
       <action name="Execute" command="thunar" />
@@ -31,5 +31,23 @@
       </mousebind>
     </context>
   </mouse>
+
+  <libinput>
+    <device>
+      <naturalScroll>no</naturalScroll>
+      <pointerSpeed>0.0</pointerSpeed>
+      <leftHanded>no</leftHanded>
+    </device>
+
+    <device category="touchpad">
+      <tap>yes</tap>
+      <naturalScroll>no</naturalScroll>
+      <pointerSpeed>0.2</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <disableWhileTyping>yes</disableWhileTyping>
+      <clickMethod>clickfinger</clickMethod>
+      <sendEventsMode>yes</sendEventsMode>
+    </device>
+  </libinput>
 
 </labwc_config>

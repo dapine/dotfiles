@@ -4,4 +4,4 @@ kanshi >/dev/null 2>&1 &
 mako >/dev/null 2>&1 &
 lxqt-policykit-agent >/dev/null 2>&1 &
 hypridle >/dev/null 2>&1 &
-sfwbar &
+quickshell &
